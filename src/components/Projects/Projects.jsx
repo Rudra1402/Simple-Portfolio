@@ -8,11 +8,13 @@ function Projects() {
     const [expandProject, setExpandProject] = useState(false);
 
     const floater = (
-        <div className='bg-[#000b] fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center'>
-            <div className='flex flex-col gap-5 w-4/5 h-4/5 md:w-3/5 md:h-3/5 rounded-md bg-gray-200 text-gray-800 overflow-auto relative p-4'>
+        <div className='bg-[#000c] fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center'>
+            <div className='flex flex-col gap-5 w-11/12 h-5/6 md:w-3/5 md:h-3/5 rounded-md bg-gray-200 text-gray-800 overflow-auto relative p-4'>
                 <div className='flex flex-col gap-4 md:gap-2 md:flex-row justify-between'>
-                    <div className='text-2xl underline underline-offset-8 leading-none font-medium'>{p?.name}</div>
-                    <small className='border border-gray-500 text-gray-800 px-2 rounded w-fit'>
+                    <div className='text-2xl underline underline-offset-8 leading-none font-medium'>
+                        {p?.name}
+                    </div>
+                    <small className='border border-gray-500 text-gray-800 px-2 rounded w-fit leading-none flex items-center py-1'>
                         {p?.category}
                     </small>
                 </div>
@@ -45,7 +47,7 @@ function Projects() {
     )
 
     return (
-        <div
+        <code
             className='border-t border-t-gray-600 border-b border-b-gray-600 !text-white flex flex-wrap gap-x-4 gap-y-6 justify-center py-8 px-4 md:p-8 w-full'
         >
             {expandProject ? floater : null}
@@ -53,7 +55,7 @@ function Projects() {
             {projects.map((p, index) => (
                 <div
                     key={index}
-                    className='flex flex-col gap-2 p-4 rounded-md w-full md:w-1/4 border border-gray-600 bg-[#0005]'
+                    className='flex flex-col gap-2 p-4 rounded-md w-full md:w-1/4 border border-gray-600 bg-[#fffd] text-gray-800'
                 >
                     <div className='flex justify-between items-center'>
                         <h2 className='text-2xl md:text-xl leading-none'>{p.name}</h2>
@@ -66,21 +68,21 @@ function Projects() {
                             }}
                         />
                     </div>
-                    <small className='text-lg leading-none md:text-base border border-gray-200 text-gray-200 px-2 py-1 md:py-0.5 rounded w-fit'>
+                    <small className='text-base leading-none md:text-base border border-gray-500 px-2 py-1 md:py-0.5 rounded w-fit'>
                         {p.category}
                     </small>
                     <div className='flex gap-2 md:gap-1.5 flex-wrap pt-2 pb-1'>
                         {p.techStack.map((ts, ix) => (
                             <div
                                 key={ix}
-                                className='bg-gray-300 px-2 rounded text-gray-800 md:text-sm'
+                                className='bg-gray-800 px-2 py-1.5 flex items-center justify-center !leading-none rounded text-gray-300 md:text-sm'
                             >{ts}</div>
                         ))}
                     </div>
                     <p className='leading-5 text-ellipsis overflow-hidden line-clamp-4'>{p.desc}</p>
                 </div>
             ))}
-        </div>
+        </code>
     )
 }
 

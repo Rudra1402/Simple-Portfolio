@@ -38,14 +38,14 @@ export const projects = [
         category: 'Banking App',
         techStack: ['React.js', 'Node.js', 'Express.js', 'Firebase', 'MongoDB'],
         desc: 'A banking app where users can add accounts, add contacts, transfer funds to the contacts, access transfer history based on user\'s added accounts. Users can also view their total balance and print transfer history statements as a pdf. Users can also edit their profiles, upload their profile images from the profile section.',
-        isOnGithub: false
+        isOnGithub: true
     },
     {
         name: 'Communix',
         category: 'Social Media Platform',
         techStack: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL'],
         desc: 'A social media site where users can share, like, comment, and report posts on their timeline along with notifications and recent activity. There is an Admin Dashboard for the admin of the site and from there the admin can manage the users, reported posts, and contact queries. A user also has a profile page with several insights.',
-        isOnGithub: false
+        isOnGithub: true
     },
     {
         name: 'E-Mart',
@@ -97,6 +97,12 @@ export const workExp = [
         type: 'Full-Time Internship',
         company: 'Modgenics Technology Solutions Pvt. Ltd.',
         location: 'Remote',
+        desc: [
+            "Worked on 2 projects. 1. DueDash, 2. EduFlip.",
+            "For the first 1.5 months, worked on DueDash. Worked on developing custom and reusable components in React.js and integrating them in the main pages.",
+            "For next 5 months, worked on EduFlip. By the time my internship came to an end, it was ready for its first release.",
+            "I had to develop all the pages in Next.js from scratch using reusable components."
+        ],
         techStack: ['React.js', 'Next.js', 'Tailwind CSS'],
         duration: '01/2023 - 07/2023',
         certificateUrl: 'https://media.licdn.com/dms/image/D562DAQGNv0dgoAAWYg/profile-treasury-document-cover-images_480/0/1699763169649?e=1700370000&v=beta&t=HzJUHD9x9U5e_KSOghFpyJ9KGniFdEI2f9k8ev0NGas'
@@ -106,6 +112,11 @@ export const workExp = [
         type: 'Summer Internship',
         company: 'TatvaSoft',
         location: 'Remote',
+        desc: [
+            "Got to work on an individual project. I had to develop an online shopping store.",
+            "This store contains electronic gadgets as the primary products.",
+            "Everyday I had to report to the manager regarding the progress of the project."
+        ],
         techStack: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL'],
         duration: '06/2022 - 07/2022',
         certificateUrl: 'https://media.licdn.com/dms/image/D4D2DAQHWnJf3gOxq7w/profile-treasury-document-cover-images_480/0/1692809204396?e=1700370000&v=beta&t=-cCxgVc89b5Lq7AAQqXgAbUnmR05PU-KlNzs56m4Hi4'
@@ -121,9 +132,9 @@ export const education = [
         cgpa: ''
     },
     {
-        institute: 'Sardar Vallabhbhai Patel Institute of Technology',
+        institute: 'SVIT',
         city: 'Vasad, Gujarat, India',
-        courseDegree: 'Bachelor of Engineering - Information Technology',
+        courseDegree: 'B.E. - Information Technology',
         duration: '06/2019 - 05/2023',
         cgpa: '9.02/10.00'
     }

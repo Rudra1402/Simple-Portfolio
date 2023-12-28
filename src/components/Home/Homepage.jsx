@@ -17,6 +17,7 @@ function Homepage() {
                             key={index}
                             href={s.url}
                             target={'_blank'}
+                            rel="noreferrer"
                             title={s.name}
                         >
                             <s.Component className='h-7 w-7 md:h-6 md:w-6 text-white' />
